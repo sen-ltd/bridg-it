@@ -50,3 +50,10 @@ Node 26, one thread per run (`npm run compute` took 29 min, `npm run exact` 17 m
 ## License
 
 MIT
+
+<!-- sen-publish:links -->
+## Links
+
+- 🌐 Demo: https://sen.ltd/portfolio/bridg-it/
+- 📝 記事: https://qiita.com/sen-ltd/items/0537d0203dc65d25c27e
+<!-- /sen-publish:links -->
