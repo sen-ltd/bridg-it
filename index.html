@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridg-It — Gale's game, solved by Lehman's two spanning trees</title>
+    <meta
+      name="description"
+      content="Bridg-It (Gale's game) in the browser: build bridges across the board, every move marked winning or losing by Lehman's theorem on the Shannon switching game, decided by a (2,2) pebble game. Every one of the 41 openings on the 5 × 6 board wins, and after any of them Red's bridges split into exactly two spanning trees. Checked against plain minimax on every graph with up to 6 vertices and on the whole Bridg-It game tree of the small boards."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141518'/%3E%3Cline x1='6' y1='16' x2='26' y2='16' stroke='%23ef6b5b' stroke-width='4' stroke-linecap='round'/%3E%3Cline x1='16' y1='6' x2='16' y2='12' stroke='%235b9cef' stroke-width='4' stroke-linecap='round'/%3E%3Cline x1='16' y1='20' x2='16' y2='26' stroke='%235b9cef' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Bridg-It <span>one edge short of two trees</span></h1>
+        <p class="sub">
+          David Gale's game (1958). <strong class="red-t">Red</strong> bridges neighbouring red dots to join
+          <strong class="red-t">left</strong> to <strong class="red-t">right</strong>, <strong class="blue-t">Blue</strong>
+          joins <strong class="blue-t">top</strong> to <strong class="blue-t">bottom</strong>; bridges may not cross.
+          Click a crossing point to build there. Moves marked <strong class="win-t">✓</strong> win against any
+          defence, <strong class="lose-t">✗</strong> do not, by <em>Lehman's theorem</em> (1964): the player who just
+          moved has a won game exactly when some part of their graph holding both goals carries two edge-disjoint
+          spanning trees.
+        </p>
+      </header>
+
+      <div id="wrap">
+        <div class="stage">
+          <div class="controls">
+            <label class="sel">board
+              <select id="sizeSel">
+                <option value="3">3 × 4</option>
+                <option value="4">4 × 5</option>
+                <option value="5" selected>5 × 6 (Bridg-It)</option>
+                <option value="6">6 × 7</option>
+                <option value="8">8 × 9</option>
+              </select>
+            </label>
+            <label class="sel">you play
+              <select id="youSel">
+                <option value="0">Red, first</option>
+                <option value="1">Blue, second</option>
+              </select>
+            </label>
+            <label class="sel chk"><input type="checkbox" id="hints" checked /> hints</label>
+            <label class="sel chk"><input type="checkbox" id="trees" checked /> two trees</label>
+            <button id="undo">Undo</button>
+            <button id="newGame" class="primary">New game</button>
+          </div>
+          <div id="boardwrap"><svg id="board" role="img" aria-label="Bridg-It board"></svg></div>
+          <div id="status" aria-live="polite"></div>
+        </div>
+        <div class="side">
+          <h3>who wins from here</h3>
+          <div class="panel" id="verdict"></div>
+          <h3>checked</h3>
+          <div class="panel" id="paper"></div>
+        </div>
+      </div>
+
+      <section class="notes">
+        <h2>The Shannon switching game</h2>
+        <p>
+          Look at the board from Red's side only. Red's dots are vertices, the left column is one vertex <em>s</em>,
+          the right column another <em>t</em>, and each crossing point is an edge. A red bridge claims that edge (glue
+          its two ends together); a blue bridge across it deletes it. Red wins when <em>s</em> and <em>t</em> meet, Blue
+          when they fall apart. That is Shannon's switching game, and Lehman solved it for every graph: with the
+          opponent to move, you win exactly when some vertex set containing <em>s</em> and <em>t</em> carries two
+          spanning trees that share no edge. When the opponent deletes an edge of one tree, you claim an edge of the
+          other that reconnects it, and both trees survive.
+        </p>
+        <h2>One edge short</h2>
+        <p>
+          On the n × (n+1) board Red's graph has n(n−1)+2 vertices and n² + (n−1)² edges, while two spanning trees need
+          2(V−1) = 2n² − 2n + 2: the board is exactly <em>one edge short</em>. Every opening gluing two vertices removes
+          one vertex and one edge, and then the edges split into two spanning trees exactly, for all 41 openings on the
+          5 × 6 board (and for every board up to 14 × 15). So the first player wins, with any first bridge.
+        </p>
+        <h2>The pebble game</h2>
+        <p>
+          The hints do not search. Each vertex starts with two pebbles; an edge is accepted when three pebbles can be
+          gathered on its two ends (moving pebbles back along accepted edges), and then covers one of them. This
+          (2,2) pebble game of Lee and Streinu builds a maximal set of edges no part of which is denser than two trees,
+          and <em>s, t</em> lie in a common two-tree part exactly when three pebbles can no longer be gathered on them.
+          The two trees on the board are drawn by Edmonds' matroid partition.
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          Built by <a href="https://sen.ltd/">SEN LLC</a>. TypeScript, no runtime
+          dependencies. <a href="https://github.com/sen-ltd/bridg-it">Source</a>.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

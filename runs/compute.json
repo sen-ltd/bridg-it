@@ -1,0 +1,475 @@
+{
+ "maxVertices": 6,
+ "exactBridgit": 3,
+ "node": "v26.3.0",
+ "stopped": "done",
+ "jobs": {
+  "allGraphs": {
+   "perK": [
+    {
+     "prunedMinimaxBadSoFar": 0,
+     "vertices": 2,
+     "graphs": 2,
+     "connectedST": 1,
+     "shortWinsEither": 0,
+     "cutWinsEither": 1,
+     "firstPlayerWins": 1,
+     "secondWinsOnly": 0,
+     "pebbleFirstBad": 0,
+     "pebbleSecondBad": 0,
+     "seconds": 0.139,
+     "statesSoFar": 2
+    },
+    {
+     "prunedMinimaxBadSoFar": 0,
+     "vertices": 3,
+     "graphs": 8,
+     "connectedST": 5,
+     "shortWinsEither": 0,
+     "cutWinsEither": 4,
+     "firstPlayerWins": 4,
+     "secondWinsOnly": 0,
+     "pebbleFirstBad": 0,
+     "pebbleSecondBad": 0,
+     "seconds": 0.773,
+     "statesSoFar": 10
+    },
+    {
+     "prunedMinimaxBadSoFar": 0,
+     "vertices": 4,
+     "graphs": 64,
+     "connectedST": 48,
+     "shortWinsEither": 1,
+     "cutWinsEither": 31,
+     "firstPlayerWins": 32,
+     "secondWinsOnly": 0,
+     "pebbleFirstBad": 0,
+     "pebbleSecondBad": 0,
+     "seconds": 0.021,
+     "statesSoFar": 108
+    },
+    {
+     "prunedMinimaxBadSoFar": 0,
+     "vertices": 5,
+     "graphs": 1024,
+     "connectedST": 874,
+     "shortWinsEither": 71,
+     "cutWinsEither": 451,
+     "firstPlayerWins": 502,
+     "secondWinsOnly": 0,
+     "pebbleFirstBad": 0,
+     "pebbleSecondBad": 0,
+     "seconds": 7.206,
+     "statesSoFar": 2206
+    },
+    {
+     "prunedMinimaxBadSoFar": 0,
+     "vertices": 6,
+     "graphs": 32768,
+     "connectedST": 30264,
+     "shortWinsEither": 6252,
+     "cutWinsEither": 11733,
+     "firstPlayerWins": 14783,
+     "secondWinsOnly": 0,
+     "pebbleFirstBad": 0,
+     "pebbleSecondBad": 0,
+     "seconds": 23.305,
+     "statesSoFar": 80590
+    }
+   ],
+   "states": 80590,
+   "pebbleBad": 0,
+   "bruteBad": 0,
+   "bruteChecked": 42854,
+   "shortToMoveStates": 37736,
+   "cutToMoveStates": 42854,
+   "shortWinsStates": 35515,
+   "minimaxNodes": 80590,
+   "prunedMinimaxBad": 0,
+   "prunedStates": 39974,
+   "seconds": 32.136
+  },
+  "sampledGraphs": {
+   "rows": [
+    {
+     "vertices": 7,
+     "graphs": 30000,
+     "shortWinsEither": 11611,
+     "cutWinsEither": 7452,
+     "firstPlayerWins": 10937,
+     "secondWinsOnly": 0,
+     "states": 800363,
+     "pebbleBad": 0,
+     "bruteBad": 0,
+     "bruteChecked": 0,
+     "shortToMoveStates": 511439,
+     "cutToMoveStates": 288924,
+     "shortWinsStates": 522562,
+     "seconds": 105.199
+    },
+    {
+     "vertices": 8,
+     "graphs": 1000,
+     "shortWinsEither": 600,
+     "cutWinsEither": 148,
+     "firstPlayerWins": 252,
+     "secondWinsOnly": 0,
+     "states": 432097,
+     "pebbleBad": 0,
+     "bruteBad": 0,
+     "bruteChecked": 0,
+     "shortToMoveStates": 284468,
+     "cutToMoveStates": 147629,
+     "shortWinsStates": 313654,
+     "seconds": 42.798
+    }
+   ],
+   "seconds": 147.997
+  },
+  "randomMultigraphs": {
+   "cases": 20000,
+   "criterionHolds": 5961,
+   "pebbleVsBruteBad": 0,
+   "treeCases": 15414,
+   "treePackingVsUnionRankBad": 0,
+   "seconds": 782.945
+  },
+  "bridgitExact": {
+   "rows": [
+    {
+     "n": 1,
+     "slots": 1,
+     "redFirstWins": true,
+     "redSecondWins": false,
+     "winningFirstMoves": 1,
+     "criterionAgrees": 1,
+     "states": 2,
+     "pebbleBad": 0,
+     "bruteBad": 0,
+     "bruteChecked": 1,
+     "shortToMoveStates": 1,
+     "cutToMoveStates": 1,
+     "shortWinsStates": 1,
+     "seconds": 0.001
+    },
+    {
+     "n": 2,
+     "slots": 5,
+     "redFirstWins": true,
+     "redSecondWins": false,
+     "winningFirstMoves": 5,
+     "criterionAgrees": 5,
+     "states": 26,
+     "pebbleBad": 0,
+     "bruteBad": 0,
+     "bruteChecked": 12,
+     "shortToMoveStates": 14,
+     "cutToMoveStates": 12,
+     "shortWinsStates": 18,
+     "seconds": 0.001
+    },
+    {
+     "n": 3,
+     "slots": 13,
+     "redFirstWins": true,
+     "redSecondWins": false,
+     "winningFirstMoves": 13,
+     "criterionAgrees": 13,
+     "states": 5233,
+     "pebbleBad": 0,
+     "bruteBad": 0,
+     "bruteChecked": 2016,
+     "shortToMoveStates": 3217,
+     "cutToMoveStates": 2016,
+     "shortWinsStates": 3589,
+     "seconds": 0.11
+    }
+   ],
+   "seconds": 0.118
+  },
+  "openings": {
+   "rows": [
+    {
+     "n": 1,
+     "vertices": 2,
+     "edges": 1,
+     "twoTreesNeed": 2,
+     "winningOpenings": 1,
+     "openingsLeavingExactlyTwoTrees": 1,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.001
+    },
+    {
+     "n": 2,
+     "vertices": 4,
+     "edges": 5,
+     "twoTreesNeed": 6,
+     "winningOpenings": 5,
+     "openingsLeavingExactlyTwoTrees": 5,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.001
+    },
+    {
+     "n": 3,
+     "vertices": 8,
+     "edges": 13,
+     "twoTreesNeed": 14,
+     "winningOpenings": 13,
+     "openingsLeavingExactlyTwoTrees": 13,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.001
+    },
+    {
+     "n": 4,
+     "vertices": 14,
+     "edges": 25,
+     "twoTreesNeed": 26,
+     "winningOpenings": 25,
+     "openingsLeavingExactlyTwoTrees": 25,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.005
+    },
+    {
+     "n": 5,
+     "vertices": 22,
+     "edges": 41,
+     "twoTreesNeed": 42,
+     "winningOpenings": 41,
+     "openingsLeavingExactlyTwoTrees": 41,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.019
+    },
+    {
+     "n": 6,
+     "vertices": 32,
+     "edges": 61,
+     "twoTreesNeed": 62,
+     "winningOpenings": 61,
+     "openingsLeavingExactlyTwoTrees": 61,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.083
+    },
+    {
+     "n": 7,
+     "vertices": 44,
+     "edges": 85,
+     "twoTreesNeed": 86,
+     "winningOpenings": 85,
+     "openingsLeavingExactlyTwoTrees": 85,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.235
+    },
+    {
+     "n": 8,
+     "vertices": 58,
+     "edges": 113,
+     "twoTreesNeed": 114,
+     "winningOpenings": 113,
+     "openingsLeavingExactlyTwoTrees": 113,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 0.516
+    },
+    {
+     "n": 9,
+     "vertices": 74,
+     "edges": 145,
+     "twoTreesNeed": 146,
+     "winningOpenings": 145,
+     "openingsLeavingExactlyTwoTrees": 145,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 1.283
+    },
+    {
+     "n": 10,
+     "vertices": 92,
+     "edges": 181,
+     "twoTreesNeed": 182,
+     "winningOpenings": 181,
+     "openingsLeavingExactlyTwoTrees": 181,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 3.388
+    },
+    {
+     "n": 11,
+     "vertices": 112,
+     "edges": 221,
+     "twoTreesNeed": 222,
+     "winningOpenings": 221,
+     "openingsLeavingExactlyTwoTrees": 221,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 5.466
+    },
+    {
+     "n": 12,
+     "vertices": 134,
+     "edges": 265,
+     "twoTreesNeed": 266,
+     "winningOpenings": 265,
+     "openingsLeavingExactlyTwoTrees": 265,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 7.675
+    },
+    {
+     "n": 13,
+     "vertices": 158,
+     "edges": 313,
+     "twoTreesNeed": 314,
+     "winningOpenings": 313,
+     "openingsLeavingExactlyTwoTrees": 313,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 52.678
+    },
+    {
+     "n": 14,
+     "vertices": 184,
+     "edges": 365,
+     "twoTreesNeed": 366,
+     "winningOpenings": 365,
+     "openingsLeavingExactlyTwoTrees": 365,
+     "blueHoldsWinAtStart": false,
+     "redHoldsWinAtStart": false,
+     "seconds": 88.478
+    }
+   ],
+   "seconds": 159.834
+  },
+  "duality": {
+   "rows": [
+    {
+     "n": 2,
+     "positions": 1788,
+     "bothOrNeitherWin": 0,
+     "moverWins": 1207
+    },
+    {
+     "n": 3,
+     "positions": 4390,
+     "bothOrNeitherWin": 0,
+     "moverWins": 2883
+    },
+    {
+     "n": 4,
+     "positions": 8550,
+     "bothOrNeitherWin": 0,
+     "moverWins": 5508
+    },
+    {
+     "n": 5,
+     "positions": 14074,
+     "bothOrNeitherWin": 0,
+     "moverWins": 8983
+    },
+    {
+     "n": 6,
+     "positions": 20983,
+     "bothOrNeitherWin": 0,
+     "moverWins": 13167
+    },
+    {
+     "n": 7,
+     "positions": 8814,
+     "bothOrNeitherWin": 0,
+     "moverWins": 5548
+    },
+    {
+     "n": 8,
+     "positions": 11991,
+     "bothOrNeitherWin": 0,
+     "moverWins": 7379
+    },
+    {
+     "n": 9,
+     "positions": 15118,
+     "bothOrNeitherWin": 0,
+     "moverWins": 9218
+    }
+   ],
+   "seconds": 488.076
+  },
+  "selfPlay": {
+   "rows": [
+    {
+     "n": 3,
+     "games": 200,
+     "modes": [
+      "computerRed",
+      "computerBlue",
+      "both"
+     ],
+     "redWinsVsRandom": 200,
+     "blueWinsVsRandomRed": 197,
+     "redWinsVsComputer": 200,
+     "minWinningMovesForRed": 1,
+     "medianWinningMovesForRed": 7
+    },
+    {
+     "n": 4,
+     "games": 200,
+     "modes": [
+      "computerRed",
+      "computerBlue",
+      "both"
+     ],
+     "redWinsVsRandom": 200,
+     "blueWinsVsRandomRed": 199,
+     "redWinsVsComputer": 200,
+     "minWinningMovesForRed": 1,
+     "medianWinningMovesForRed": 11
+    },
+    {
+     "n": 5,
+     "games": 100,
+     "modes": [
+      "computerRed",
+      "computerBlue",
+      "both"
+     ],
+     "redWinsVsRandom": 100,
+     "blueWinsVsRandomRed": 92,
+     "redWinsVsComputer": 100,
+     "minWinningMovesForRed": 1,
+     "medianWinningMovesForRed": 21
+    },
+    {
+     "n": 6,
+     "games": 40,
+     "modes": [
+      "computerRed"
+     ],
+     "redWinsVsRandom": 40,
+     "blueWinsVsRandomRed": 0,
+     "redWinsVsComputer": 0,
+     "minWinningMovesForRed": 1,
+     "medianWinningMovesForRed": 29
+    },
+    {
+     "n": 7,
+     "games": 20,
+     "modes": [
+      "computerRed"
+     ],
+     "redWinsVsRandom": 20,
+     "blueWinsVsRandomRed": 0,
+     "redWinsVsComputer": 0,
+     "minWinningMovesForRed": 1,
+     "medianWinningMovesForRed": 44
+    }
+   ],
+   "seconds": 116.72
+  }
+ },
+ "seconds": 1727.846
+}

@@ -1,0 +1,23 @@
+{
+  "name": "bridg-it",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bridg-It (Gale's game) in the browser: every move marked winning or losing by Lehman's theorem on the Shannon switching game, decided by a (2,2) pebble game, with the two spanning trees drawn on the board. Checked against plain minimax on every graph up to 6 vertices and the whole game tree of small boards. TypeScript, no runtime deps.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 4173",
+    "test": "vitest run",
+    "compute": "node --max-old-space-size=8192 tools/compute.mts 6 3 runs/compute.json",
+    "exact": "node --max-old-space-size=8192 tools/exact.mts 4 12000000 runs/exact-4.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5"
+  },
+  "license": "MIT"
+}

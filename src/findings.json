@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "ok": true,
+   "text": "Lehman's criterion = plain minimax, every graph up to 6 vertices",
+   "detail": "33,866 labelled graphs, both players first; 80,590 positions reached, each checked (Nash-Williams–Tutte by brute force at 42,854 of them)"
+  },
+  {
+   "ok": true,
+   "text": "the same on random graphs with 7 and 8 vertices",
+   "detail": "30,000 graphs on 7, 1,000 graphs on 8; 1,232,460 positions, each checked"
+  },
+  {
+   "ok": true,
+   "text": "pebble game = brute force on random multigraphs",
+   "detail": "20,000 multigraphs on 7–9 vertices, every vertex set and every partition"
+  },
+  {
+   "ok": true,
+   "text": "the two trees drawn are as large as possible",
+   "detail": "Edmonds' partition = rank of the 2-fold union, 15,414 multigraphs, every edge subset"
+  },
+  {
+   "ok": true,
+   "text": "Bridg-It up to 4 × 5 by minimax",
+   "detail": "first player wins with every one of the 25 openings, as Lehman says (1,777,255 positions)"
+  },
+  {
+   "ok": true,
+   "text": "every opening wins and leaves exactly two spanning trees",
+   "detail": "41 of 41 on 5 × 6; every board up to 14 × 15 (365 openings there)"
+  },
+  {
+   "ok": true,
+   "text": "no draws: Red's graph and Blue's graph agree",
+   "detail": "85,708 random positions, boards 2 × 3 to 9 × 10"
+  },
+  {
+   "ok": true,
+   "text": "the computer moving first never loses",
+   "detail": "1,060 games against random play (boards 3 × 4 to 7 × 8) and against itself (up to 5 × 6)"
+  }
+ ]
+}
